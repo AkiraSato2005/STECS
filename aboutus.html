@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - STECS</title>
+  <link rel="icon" type="image/x-icon" href="secs.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="aboutus.css">
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .about-content {
+      animation: fadeInUp 1s ease-out;
+    }
+  </style>
+</head>
+<body onscroll="scrollFunction()">
+  <header class="header" id="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logologo.png" alt="School Logo" class="logo" id="logo">
+      </a>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admission.html">Admission</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content Section -->
+  <section class="about-content">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Welcome to Saint Edriel Catholic School (STECS), where we believe in nurturing holistic development and empowering students to become compassionate leaders in a global society. At STECS, we strive for excellence in academics, character development, and community engagement. Our dedicated faculty and staff are committed to providing a nurturing and supportive learning environment where every student can thrive.</p>
+      
+      <!-- Interactive Timeline -->
+      <div class="timeline">
+        <h3>Our Journey</h3>
+        <ul>
+          <li><span>2018</span> - Vision for STECS conceived</li>
+          <li><span>2019</span> - Planning and establishment phase</li>
+          <li><span>2020</span> - Grand opening ceremony of STECS</li>
+          <li><span>2021</span> - Introduction of STECS' core values</li>
+          <li><span>2022</span> - Launch of STECS Scholarship Program</li>
+          <li><span>2023</span> - Expansion of campus facilities and programs</li>
+          <li><span>2024</span> - Achieved 95% pass rate in national exams</li>
+        </ul>
+      </div>
+      
+      <!-- Meet the Team -->
+      <div class="meet-the-team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <img src="phi.jpeg" alt="Team Member 1">
+            <h3>John Edriel Phi</h3>
+            <p>President/CEO</p>
+            <p>John Edriel Phi, a visionary leader with a passion for education, founded STECS with the mission of providing quality education accessible to all.</p>
+          </div>
+          <div class="team-member">
+            <img src="howard.png" alt="Team Member 2">
+            <h3>John Howard Servallos</h3>
+            <p>Vice President</p>
+            <p>John Howard Servallos brings extensive experience in educational administration and strategic planning to his role as Vice President at STECS.</p>
+          </div>
+          <div class="team-member">
+            <img src="lexia.png" alt="Team Member 3">
+            <h3>Allexia D. Papa</h3>
+            <p>Secretary to the President</p>
+            <p>Allexia D. Papa ensures the smooth operation of STECS by providing administrative support and coordination to the President's office.</p>
+          </div>
+          <div class="team-member">
+            <img src="kiko.png" alt="Team Member 4">
+            <h3>Francis Rayla</h3>
+            <p>College Dean</p>
+            <p>Francis Rayla oversees the academic programs and faculty development initiatives at STECS, ensuring the highest standards of education.</p>
+          </div>
+          <div class="team-member">
+            <img src="darryl.png" alt="Team Member 5">
+            <h3>Darryl Angelo G. Carandang</h3>
+            <p>Senior High School Principal</p>
+            <p>Darryl Angelo G. Carandang is dedicated to providing innovative and student-centered learning experiences for senior high school students at STECS.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Stories Gallery -->
+      <div class="success-stories">
+        <h2>Student Success Stories</h2>
+        <div class="gallery">
+          <button class="gallery-btn prev" onclick="prevSlide()">&#10094;</button>
+          <div class="gallery-items">
+            <div class="gallery-item">
+              <img src="enso.jpg" alt="John Edriel Phi" class="gallery-image">
+              <p>Henson Rodriguez: Overcoming challenges and achieving academic excellence at STECS.</p>
+            </div>
+            <div class="gallery-item">
+              <img src="kian.jpg" alt="John Howard Servallos" class="gallery-image">
+              <p>Kian Karlson Lumague: A journey of leadership and personal growth at STECS.</p>
+            </div>
+            <div class="gallery-item">
+              <img src="jeric.jpg" alt="Allexia D. Papa" class="gallery-image">
+              <p>Jeric Lagsac De Padua: Making a difference through dedication and service at STECS.</p>
+            </div> 
+            <div class="gallery-item">
+              <img src="noli.jpg" alt="Francis Rayla" class="gallery-image">
+              <p>Noli Rodenas: Inspiring students to pursue excellence and creativity at STECS.</p> 
+            </div> 
+            <div class="gallery-item">
+              <img src="rence.jpg" alt="Darryl Angelo G. Carandang" class="gallery-image">
+              <p>Clarence Tapay: Fostering a supportive and inclusive community at STECS.</p>
+            </div>
+          </div>
+          <button class="gallery-btn next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>      
+    </div>
+  </section>
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    function scrollFunction() {
+      var header = document.getElementById("header");
+      var sidebar = document.getElementById("sidebar");
+      var logo = document.getElementById("logo");
+
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add("sticky");
+        sidebar.style.display = "none";
+  
+        logo.src = "secs.png";
+      } else {
+        header.classList.remove("sticky");
+        sidebar.style.display = "block";
+        logo.src = "logologo.png";
+        
+      }
+    }
+
+    // Gallery JavaScript functions
+    var slideIndex = 1;
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("gallery-item");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex += 1);
+    }
+
+    function prevSlide() {
+      showSlide(slideIndex -= 1);
+    }
+
+    showSlide(slideIndex);
+  </script>
+</body>
+</html>

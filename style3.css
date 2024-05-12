@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  background-color: #8c4845;
+  padding: 10px 20px;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  height: 60px;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: center;
+}
+
+.logo {
+  max-width: 70px;
+  height: auto;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: -200px;
+  height: calc(100% - 60px);
+  width: 120px;
+  background-color: rgba(140, 72, 69, 0.8);
+  padding-top: 20px;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  font-size: 14px;
+  color: #fff;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  padding: 10px;
+  text-align: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Sticky header */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Content styles */
+#content {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section {
+  width: calc(33% - 40px);
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Additional styles */
+.section h2 {
+  color: #8c4845;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  background-color: #8c4845;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 900px) {
+  .section {
+    width: calc(50% - 40px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .section {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Additional class for content adjustment */
+.content-shifted {
+  margin-left: 100px; /* Adjusted based on sidebar width */
+}

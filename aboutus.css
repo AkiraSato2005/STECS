@@ -1,0 +1,260 @@
+/* Header styles for aboutus.html */
+.header {
+  background-color: whitesmoke;
+  padding: 5px;
+  border-bottom: 2px solid #8c4845;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  transition: background-color 0.3s ease;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: center; 
+}
+
+.logo {
+  max-width: 150px; 
+  height: auto;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: #8c4845;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .logo {
+    max-width: 100px; 
+  }
+}
+
+/* Sticky header style */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #8c4845; 
+
+}
+
+/* Content section styles */
+.about-content {
+  padding: 40px 0;
+  background-color: #f2f2f2; 
+}
+
+.about-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  color: #8c4845;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #333;
+  font-size: 18px;
+}
+
+/* About Us Page Styles */
+.about-content {
+  padding: 40px 0;
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 999; 
+}
+
+.about-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.about-content h2 {
+  color: #8c4845;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #333;
+  font-size: 18px;
+}
+
+/* Timeline Styles */
+.timeline {
+  margin-top: 40px;
+}
+
+.timeline h3 {
+  color: #8c4845;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.timeline li p {
+  padding-left: 20px; 
+}
+
+.timeline li span {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background-color: #8c4845;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Meet the Team Styles */
+.meet-the-team {
+  margin-top: 40px;
+}
+
+.meet-the-team h2 {
+  color: #8c4845;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex-basis: 250px;
+  margin: 0 10px 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Success Stories Gallery Styles */
+.success-stories {
+  margin-top: 40px;
+}
+
+.success-stories h2 {
+  color: #8c4845;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #8c4845;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-btn.prev {
+  left: 0;
+}
+
+.gallery-btn.next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: #8c4845;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.gallery-items {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.gallery-item {
+  flex: 0 0 100%;
+  display: none;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 600px) {
+  .team-member {
+    flex-basis: calc(50% - 20px);
+  }
+}

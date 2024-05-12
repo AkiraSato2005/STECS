@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - STECS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contactus.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logologo.png" alt="School Logo" class="logo" id="logo">
+      </a>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="admission.html">Admission</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Us Content -->
+  <section class="contact-content">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or inquiries, feel free to reach out to us using the contact information below:</p>
+      <div class="contact-details">
+        <p><strong>Address:</strong> Morente, Marfrancisco, Pinamalayan, Oriental Mindoro</p>
+        <p><strong>Phone:</strong> 09123456789</p>
+        <p><strong>Email:</strong> stecs@gmail.com</p>
+      </div>
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form action="#" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Content Section -->
+  <section class="additional-content">
+    <div class="container">
+      <h2>Stay Connected</h2>
+      <p>Follow us on social media to stay updated with our latest events and announcements.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank"><img src="fb.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#" target="_blank"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="#" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <h2>Subscribe to our Newsletter</h2>
+      <p>Stay updated with our latest news, events, and promotions by subscribing to our newsletter.</p>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <!-- JavaScript for toggling menu and sticky header -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  
+    window.onscroll = function() {scrollFunction()};
+  
+    function scrollFunction() {
+      var header = document.getElementById("header");
+      var sidebar = document.getElementById("sidebar");
+      var logo = document.getElementById("logo");
+  
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add("sticky");
+        sidebar.style.display = "none";
+        logo.src = "secs.png";
+      } else {
+        header.classList.remove("sticky");
+        sidebar.style.display = "block";
+        logo.src = "logologo.png";
+      }
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments - STECS</title>
+  <link rel="icon" type="image/x-icon" href="secs.ico">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body onscroll="scrollFunction()">
+  <header class="header" id="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="secs.png" alt="School Logo" class="logo" id="logo">
+      </a>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="quizzes.html">Quizzes</a></li>
+      <li><a href="assignments.html">Assignments</a></li>
+      <li><a href="index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Page Content -->
+  <div class="container">
+    <div id="content">
+      <!-- Updated Sections (Assignments with Details) -->
+      <div class="section" style="animation: slideIn 0.5s ease 0s 1 normal;">
+        <h2>Math Assignment</h2>
+        <p><strong>Due Date:</strong> May 15, 2024</p>
+        <p><strong>Description:</strong> Complete exercises 1-10 on page 50 of the textbook.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 0.2s 1 normal;">
+        <h2>Physics Assignment</h2>
+        <p><strong>Due Date:</strong> May 17, 2024</p>
+        <p><strong>Description:</strong> Write a report on Newton's laws of motion.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 0.4s 1 normal;">
+        <h2>Chemistry Assignment</h2>
+        <p><strong>Due Date:</strong> May 20, 2024</p>
+        <p><strong>Description:</strong> Conduct a lab experiment on chemical reactions and submit your findings.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 0.6s 1 normal;">
+        <h2>Biology Assignment</h2>
+        <p><strong>Due Date:</strong> May 22, 2024</p>
+        <p><strong>Description:</strong> Research and write a paper on genetic mutations.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 0.8s 1 normal;">
+        <h2>History Assignment</h2>
+        <p><strong>Due Date:</strong> May 25, 2024</p>
+        <p><strong>Description:</strong> Prepare a presentation on World War II.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 1s 1 normal;">
+        <h2>Literature Assignment</h2>
+        <p><strong>Due Date:</strong> May 27, 2024</p>
+        <p><strong>Description:</strong> Write an essay analyzing a poem of your choice.</p>
+      </div>
+
+      <div class="section" style="animation: slideIn 0.5s ease 1.2s 1 normal;">
+        <h2>Computer Science Assignment</h2>
+        <p><strong>Due Date:</strong> May 30, 2024</p>
+        <p><strong>Description:</strong> Develop a simple program using the Python programming language.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 STECS. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for toggling menu and sticky header -->
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById('sidebar');
+      var content = document.getElementById('content');
+      sidebar.classList.toggle('active');
+      content.classList.toggle('content-shifted'); // Toggle content-shifted class
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      var header = document.getElementById("header");
+    
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+</html>

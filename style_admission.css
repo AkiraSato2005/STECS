@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8c4845; /* Brown background color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1s ease;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.admission-title h2 {
+    margin-bottom: 20px;
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.admission-title p {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 16px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    color: #8c4845;
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:hover,
+.input-group input:focus,
+.input-group textarea:hover,
+.input-group textarea:focus {
+    border-color: #f39c12;
+}
+
+.terms-condition {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.terms-condition input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.terms-condition label {
+    color: #666;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #d18000;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.terms-condition a {
+    color: #145388;
+    text-decoration: none;
+}
+
+.terms-condition a:hover {
+    color: #f39c12;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-container {
+        width: 80%;
+    }
+
+    .logo img {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: calc(100% - 20px);
+    }
+}

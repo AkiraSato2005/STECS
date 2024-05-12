@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - STECS</title>
+  <link rel="icon" type="image/x-icon" href="secs.ico">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body onscroll="scrollFunction()">
+  <header class="header" id="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="secs.png" alt="School Logo" class="logo" id="logo">
+      </a>
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="quizzes.html">Quizzes</a></li>
+      <li><a href="assignments.html">Assignments</a></li>
+      <li><a href="index.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Page Content -->
+  <div id="content">
+    <div class="section">
+      <h2>Welcome to STECS!</h2>
+      <p>At STECS, we are committed to providing top-quality education that prepares students for the challenges of tomorrow. Our dedicated faculty and innovative programs ensure that every student receives a personalized learning experience.</p>
+    </div>
+
+    <div class="section">
+      <h2>Our Services</h2>
+      <p>Explore our comprehensive range of services designed to support students in their academic journey. From tutoring and mentoring to career counseling and extracurricular activities, we strive to meet the diverse needs of our students.</p>
+    </div>
+
+    <div class="section">
+      <h2>Testimonials</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to learn more about STECS? Get in touch with us today! Our friendly staff is here to assist you and provide all the information you need.</p>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="section">
+      <h2>Events</h2>
+      <p>Stay updated with our upcoming events and activities. Join us for workshops, seminars, and more!</p>
+    </div>
+
+    <div class="section">
+      <h2>Admissions</h2>
+      <p>Learn about our admissions process and how to enroll in our programs. We welcome students from all backgrounds and strive to make the application process as smooth as possible.</p>
+    </div>
+
+    <div class="section">
+      <h2>Faculty</h2>
+      <p>Meet our experienced faculty members who are dedicated to nurturing the talents and potential of our students. Learn about their backgrounds and contributions to the field of education.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 STECS. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for toggling menu and sticky header -->
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById('sidebar');
+      var content = document.getElementById('content');
+      sidebar.classList.toggle('active');
+      content.classList.toggle('content-shifted'); // Toggle content-shifted class
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      var header = document.getElementById("header");
+    
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+</html>

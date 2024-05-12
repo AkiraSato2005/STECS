@@ -1,0 +1,437 @@
+/* Global styles */
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; 
+}
+
+/* Header styles */
+.header {
+  background-color: #8c4845;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  border-bottom: 2px solid #fff;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.school-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 100%;
+  background-color: #f9f9f9; 
+  overflow-y: auto;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 20px;
+}
+
+.sidebar.active {
+  max-height: 500px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container2 {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.container2:hover{
+  text-decoration-color: #f39c12;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* Mission, Vision, History containers */
+.mission-container,
+.vision-container,
+.history-container {
+  width: calc(33.33% - 20px); 
+  background-color: #8c4845;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  overflow: hidden; 
+  position: relative; 
+  margin-left: 25px;
+}
+
+/* Add gradient background */
+.mission-container::before,
+.vision-container::before,
+.history-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6)); 
+  z-index: 1;
+}
+
+.container-title {
+  cursor: pointer;
+  position: relative; 
+  z-index: 2; 
+}
+
+/* Add hover effect */
+.mission-container:hover::before,
+.vision-container:hover::before,
+.history-container:hover::before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0)); 
+}
+
+/* Add transition */
+.container-title,
+.container-content {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Show content on hover */
+.container-title:hover + .container-content {
+  transform: translateY(0); 
+  opacity: 1; 
+}
+
+/* Mission, Vision, History content */
+.container-content {
+  display: block;
+  position: relative;
+  z-index: 2;
+  transform: translateY(100%); 
+  opacity: 0; 
+}
+
+/* Dean container */
+.dean-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.dean-image {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.dean-message p {
+  font-size: 38px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* Slider styles */
+.slider-container {
+  background: linear-gradient(135deg, #8c4845, #451d1b); 
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.slider-title {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.slide h3 {
+  font-size: 36px;
+  color: #fff; 
+  font-weight: bold; 
+  transition: transform 0.3s, text-decoration-color 0.3s; 
+  
+}
+
+.slide h3:hover {
+  transform: scale(1.1); 
+  text-decoration-color: #f39c12; 
+}
+
+
+.slide img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.login-button {
+  margin: 5px;
+  text-decoration: underline;
+  color: #fff;
+  background-color: #451d1b;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 20px;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+}
+
+.login-button:hover {
+  background-color: #8c4845;
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-decoration-color: #f39c12;
+}
+
+
+/* Header adjustments for responsiveness */
+.header {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto; 
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px; 
+  margin-right: 50px;
+}
+
+.menu-toggle {
+  margin-right: 50px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.sidebar ul li {
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.sidebar ul li a:hover {
+  background-color: #8c4845; 
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  border-radius: 10px;
+  text-decoration: underline;
+  text-decoration-color: #f39c12;
+}
+
+.sidebar ul li a {
+  display: inline-block;
+  padding: 10px;
+  color: #8c4845; 
+  text-decoration: none;
+  transition: transform 0.3s; 
+}
+
+.sidebar ul li:hover a {
+  transform: scale(1.05); 
+}
+
+
+
+
+/* Positioning student and teacher login buttons */
+.login-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.school-name .big {
+  font-size: 36px;
+}
+.school-name .small {
+  font-size: 50px;
+}
+
+/* Adjustments for small screens */
+@media only screen and (max-width: 600px) {
+  .school-name {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-right: 0;
+  }
+
+  .login-buttons {
+    position: static;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .login-button {
+    margin: 5px 0;
+  }
+  .dean-image {
+    width: 250px;
+    height: auto;
+  }
+}
+  /* Adjustments for small screens */
+@media only screen and (max-width: 600px) {
+  .container2 {
+    flex-direction: column; 
+  }
+
+  .mission-container,
+  .vision-container,
+  .history-container {
+    width: 70%; 
+  }
+}
+/* Footer Middle Styles */
+.footer-middle {
+  background-color: #8c4845;
+  padding: 20px 5px;
+  color: #fff;
+  justify-content: left;
+}
+
+.single-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #fff; 
+}
+
+.menu-container ul.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-container ul.menu li {
+  margin-bottom: 15px;
+}
+
+.menu-container ul.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-container ul.menu li a:hover {
+  color: #f39c12; 
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+  background-color: #8c4945ef; 
+  padding: 20px 0;
+}
+
+.copy-right-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-menu {
+  text-align: center;
+}
+
+.footer-social-icon a {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 14px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.footer-social-icon a:hover {
+  transform: scale(1.2);
+}
+@media only screen and (min-width: 600px) {
+  .sidebar ul {
+    flex-direction: row; 
+    justify-content: flex-start; 
+  }
+
+  .sidebar ul li {
+    margin-right: 100px; 
+    margin-left: 130px;
+  }
+}
